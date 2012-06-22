@@ -1,2 +1,4 @@
 
     grep "driver"|cut -d\, f1,3
+
+use `grep` to read logs
