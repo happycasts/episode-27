@@ -1,0 +1,11 @@
+1. locate filename
+   
+        updatedb
+   
+   too troublesome, then use
+
+        find ~ -mmin -10
+
+1. grep is not very smart on handling files, as it should, as a Unix tool, grep focus on string search.
+   
+    grep -R
