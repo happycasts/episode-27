@@ -2,28 +2,9 @@
 we are not here to talk about grep, we are here to give tips on how to do general string search(ack-grep is for code)
 happycasts---Linux tips for pragmatic programmers
 
-#why the name
-http://en.wikipedia.org/wiki/Grep
-
 # tips
-    grep "driver"|cut -d\, f1,3
-
-use `grep` to read logs
 
    grep -c "Error" log.txt
-   grep --context=6 success log.txt
-
-control word boundary:
-
-    peter:~$ grep -w 'hello' hello 
-    hello
-    peter:~$ grep 'hello\>' hello 
-    hello
-    syshello
-    peter:~$ grep '\<hello' hello
-    hello
-    hellosys
-    peter:~$ 
 
 show line number
 
@@ -33,7 +14,6 @@ search recursively
 
   grep -R hello *
 
-
   find . -mmin -10 # '0' means less than 
 
     peter:~/edocs$ find . -mmin 2
@@ -42,25 +22,6 @@ search recursively
     peter:~/edocs$ find . -mmin 5
     .
     ./hello
-# perl, ruby, python
-
-    perl -pi -e 's/you/me/g' file
-
-sed:
-
-    #!/bin/bash
-    # change all ii into bb for all files in $PWD
-    # like vim bufdo 
-    for file in `find . -type f`
-    do
-        sed -i 's/ii/bb/g' $file
-    done
-
-# vim 
-  
-  :grep
-
-  happygrep
 
 ## ruby
  -i extension   Specifies in-place-edit mode.  The extension, if specified, is added to old file name to make a backup copy.  For example:
